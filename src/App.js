@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
 import './App.css';
+import { USER_POSTS_FETCH_REQUESTED } from './store/actionTypes';
 
 function App() {
+  const dispatch = useDispatch();
+
+  const getPosts = () => {
+    dispatch({
+      type: USER_POSTS_FETCH_REQUESTED,
+      payload: {
+        userId: 2
+      }
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button onClick={getPosts}>Get Posts</button>
+    </>
   );
 }
 
