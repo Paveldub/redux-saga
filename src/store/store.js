@@ -13,5 +13,5 @@ export const store = createStore(rootReducer, compose(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ))
 
-// sagaMiddleWare.run(rootSaga)
-sagaMiddleWare.run(userPostsFetchRequestedWatcherSaga)
+// sagaMiddleWare.run(rootSaga) // takeEvery saga method
+sagaMiddleWare.run(userPostsFetchRequestedWatcherSaga) // saga channel

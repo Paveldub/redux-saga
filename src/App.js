@@ -12,6 +12,24 @@ function App() {
         userId: 2
       }
     })
+    dispatch({
+      type: USER_POSTS_FETCH_REQUESTED,
+      payload: {
+        userId: 2
+      }
+    })
+    dispatch({
+      type: USER_POSTS_FETCH_REQUESTED,
+      payload: {
+        userId: 2
+      }
+    })
+    dispatch({
+      type: USER_POSTS_FETCH_REQUESTED,
+      payload: {
+        userId: 2
+      }
+    })
   }
 
   return (

@@ -8,6 +8,8 @@ function* fetchUserPosts(action) {
         
         const userPosts = yield call(getUserPosts, action.payload.userId)
 
+        console.log('userPosts :', userPosts)
+
         yield put({
             type: USER_POSTS_FETCH_SUCESSDED,
             payload: {
